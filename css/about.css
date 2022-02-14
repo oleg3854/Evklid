@@ -1,0 +1,588 @@
+.about {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.about__title {
+  margin-bottom: 20px;
+}
+
+.about__text {
+  margin-bottom: 43px;
+  line-height: 32px;
+  font-size: 16px;
+  white-space: pre-line;
+  color: #333;
+}
+
+.about__link {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url(../img/about-link.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+
+.about-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.perspectives {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 49%;
+  background-image: url(../img/about__perspectives.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.perspectives__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 44px;
+  padding-left: 54px;
+  padding-right: 68px;
+  padding-bottom: 38px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.perspectives__text {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 32px;
+  color: #FFFFFF;
+  white-space: pre-line;
+}
+
+.perspectives__link {
+  padding: 18px 29px;
+  font-size: 18px;
+  line-height: 20px;
+  color: #FFFFFF;
+  border: 3px solid #FF9900;
+  transition-duration: .4s;
+}
+
+.promises {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 49%;
+}
+
+.promises__inside {
+  position: relative;
+  padding-top: 72px;
+  padding-left: 300px;
+  padding-bottom: 72px;
+  width: 100%;
+  height: 48%;
+  border: 1px solid #CACACA;
+}
+
+.promises__title {
+  margin-bottom: 10px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.promises__text {
+  line-height: 32px;
+  font-size: 18px;
+  white-space: pre-line;
+}
+
+.perspectives__footer-hidden {
+  display: none;
+  margin-bottom: 50px;
+}
+
+.perspectives__text-hidden {
+  margin-bottom: 25px;
+  font-size: 14px;
+  line-height: 28px;
+  color: #333333;
+}
+
+.perspectives__link-hidden {
+  padding: 15px 30px;
+  border: 2px solid #FF9900;
+  font-size: 17px;
+  color: #FF9900;
+}
+
+/* Псеводклассы и псевдоэлементы */
+
+.about__link:focus {
+  outline: 2px solid #000;
+}
+
+.perspectives__link:focus {
+  outline: 2px solid #fff;
+}
+
+.perspectives__link:hover {
+  background-color: #FF9900;
+}
+
+.perspectives__link:active {
+  background-color: #E1670E;
+  border: 3px solid #E1670E;
+}
+
+.promises__inside::before {
+  content: '';
+  position: absolute;
+  top: 88px;
+  left: 60px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #FF9900;
+}
+
+.consultation::after {
+  content: '';
+  position: absolute;
+  top: 72px;
+  left: 118px;
+  width: 119px;
+  height: 132px;
+  background-image: url(../img/consultation__img.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.quality::after {
+  content: '';
+  position: absolute;
+  top: 60px;
+  left: 111px;;
+  width: 127px;
+  height: 127px;
+  background-image: url(../img/quality__img.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Media */
+
+@media (max-width: 1720px) {
+
+  .perspectives__footer {
+    padding-right: 50px;
+  }
+
+  .perspectives__text {
+    margin-right: 15px;
+    white-space: normal;
+  }
+
+  .promises__inside {
+    padding-left: 250px;
+  }
+
+  .promises__title {
+    font-size: 20px;
+  }
+
+  .promises__text {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 1400px) {
+  
+  .about__text {
+    white-space: normal;
+  }
+
+  .about-wrapper {
+    display: block;
+  }
+
+  .perspectives {
+    margin-bottom: 50px;
+    padding-top: 50.5%;
+    width: 100%;
+  }
+
+  .perspectives__text {
+    white-space: pre-line;
+  }
+
+  .promises {
+    width: 100%;
+  }
+
+  .promises__text {
+    white-space: pre-line;
+  }
+
+  .consultation {
+    margin-bottom: 40px;
+  }
+
+}
+
+@media (max-width: 1024px) {
+  
+  .about {
+    padding-top: 5px;
+  }
+
+  .about__title {
+    margin-bottom: 24px;
+    font-size: 47px;
+  }
+
+  .about__text {
+    margin-bottom: 60px;
+    line-height: 32px;
+    word-spacing: 0;
+  }
+
+  .perspectives__footer {
+    padding-top: 40px;
+    padding-left: 45px;
+    padding-right: 50px;
+    padding-bottom: 36px;
+  }
+
+  .perspectives__text {
+    font-size: 18px;
+  }
+
+  .perspectives__link {
+    padding: 18px 38px;
+    font-size: 16px;
+  }
+
+  .promises__inside {
+    padding-top: 72px;
+    padding-left: 350px;
+    padding-right: 20px;
+  }
+
+  .promises__title {
+    margin-bottom: 7px;
+    font-size: 24px;
+  }
+
+  .promises__text {
+    font-size: 16px;
+  }
+
+  .quality {
+    padding-top: 60px;
+  }
+
+  .promises__inside::before {
+    content: '';
+    top: 92px;
+    left: 111px;
+    width: 120px;
+    height: 120px;
+  }
+
+  .consultation::after {
+    content: '';
+    top: 74px;
+    left: 169px;
+    width: 120px;
+    height: 133px;
+  }
+
+  .quality::before {
+    content: '';
+    top: 89px;
+    left: 111px;
+    width: 120px;
+    height: 120px;
+  }
+
+  .quality::after {
+    content: '';
+    top: 54px;
+    left: 163px;
+    width: 125px;
+    height: 125px;
+  }
+}
+
+@media (max-width: 900px) {
+  
+  .promises__inside {
+    padding-left: 255px;
+    padding-right: 0;
+  }
+
+  .promises__title {
+    font-size: 24px;
+  }
+
+  .promises__text {
+    white-space: normal;
+  }
+
+  .promises__inside::before {
+    content: '';
+    left: 51px;
+  }
+
+  .consultation::after {
+    content: '';
+    left: 111px;
+  }
+
+  .quality::after {
+    content: '';
+    left: 103px;
+  }
+}
+
+@media (max-width: 870px) {
+  
+  .perspectives__text {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 768px) {
+  
+  .about {
+    padding-top: 30px;
+  }
+
+  .about__title {
+    margin-bottom: 27px;
+  }
+
+  .about__text {
+    margin-bottom: 58px;
+    line-height: 32px;
+    word-spacing: 1px;
+  }
+
+  .perspectives {
+    margin-bottom: 40px;
+    padding-top: 71%;
+  }
+
+  .perspectives__footer {
+    padding-top: 27px;
+    padding-left: 32px;
+    padding-right: 29px;
+    padding-bottom: 20px;
+
+  }
+
+  .perspectives__text {
+    font-size: 17px;
+  }
+
+  .promises__inside {
+    padding-top: 38px;
+    padding-left: 180px;
+    padding-right: 0;
+    padding-bottom: 30px;
+  }
+
+  .promises__title {
+    font-size: 24px;
+  }
+
+  .promises__text {
+    white-space: pre-line; 
+  }
+
+  .quality {
+    padding-top: 45px;
+  }
+
+  .promises__inside::before {
+    content: '';
+    top: 83px;
+    left: 32px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .consultation::after {
+    content: '';
+    top: 72px;
+    left: 69px;
+    width: 80px;
+    height: 89px;
+  }
+
+  .quality::before {
+    content: '';
+    top: 93px;
+    left: 30px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .quality::after {
+    content: '';
+    top: 75px;
+    left: 69px;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .about {
+    padding-top: 30px;
+    padding-bottom: 25px;
+  }
+
+  .about__text {
+    margin-bottom: 58px;
+    line-height: 32px;
+  }
+
+  .perspectives {
+    margin-bottom: 10px;
+    padding-top: 60%;
+    background-position: top;
+  }
+
+  .perspectives__footer {
+    display: none;
+  }
+
+  .perspectives__footer-hidden {
+    display: block;
+  }
+
+  .promises__inside {
+    margin-top: 50px;
+    padding: 0;
+    border: none;
+  }
+
+  .promises__title {
+    margin-bottom: 10px;
+  }
+
+  .promises__inside::before,
+  .consultation::after,
+  .quality::after {
+    content: '';
+    width: 45px;
+    height: 45px;
+  }
+
+  .promises__inside::before {
+    top: -60px;
+    left: 0;
+  }
+
+  .consultation::after {
+    top: -65px;
+    left: 25px;
+  }
+
+  .quality::after {
+    top: -73px;
+    left: 21px;
+  }
+}
+
+@media (max-width: 576px) {
+  
+  .about {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .promises__text {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 320px) {
+  
+  .about {
+    padding-top: 0;
+    padding-bottom: 25px;
+  }
+
+  .about__title {
+    margin-bottom: 0;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .about__text {
+    margin-bottom: 11px;
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  .perspectives {
+    padding-top: 69%;
+  }
+
+  .perspectives__text-hidden {
+    margin-bottom: 21px;
+    font-size: 14px;
+  }
+
+  .perspectives__link-hidden {
+    padding: 11px 37px;
+    font-size: 14px;
+  }
+
+  .promises__inside {
+    margin-top: 63px;  
+  }
+
+  .promises__title {
+    margin-bottom: 3px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .consultation {
+    margin-bottom: 25px;
+  }
+
+  .promises__text {
+    white-space: normal;
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  .promises__inside::before {
+    top: -56px;
+    left: 0;
+  }
+
+  .consultation::after {
+    top: -61px;
+    left: 22px;
+    width: 45px;
+    height: 47px;
+  }
+
+  .quality::before {
+    top: -58px;
+  }
+
+  .quality::after {
+    top: -69px;
+    left: 19px;
+  }
+}

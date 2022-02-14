@@ -1,0 +1,413 @@
+.footer {
+  padding-top: 51px;
+  padding-bottom: 80px;
+  padding-right: 87px;
+  padding-left: 75px;
+  background: #222222;
+}
+
+.footer-wrapper {
+  display: flex;
+}
+
+.footer-links {
+  margin-right: 358px;
+}
+
+.footer__img {
+  margin-bottom: 5px;
+}
+
+.footer-links__list {
+  margin-bottom: 106px;
+  color: #CACACA;
+}
+
+.footer-links__item {
+  font-size: 18px;
+  line-height: 36px;
+}
+
+.socials {
+  display: flex;
+}
+
+.socials__item {
+  position: relative;
+  margin-right: 25px;
+}
+
+.form-wrapper {
+  margin-right: auto;
+}
+
+.form-wrapper__header {
+  margin-top: 9px;
+  margin-bottom: 21px;
+  color: #CACACA;
+}
+
+.form {
+  width: 570px;
+}
+
+.form__input {
+  margin-bottom: 25px;
+  padding: 21px 24px;
+  width: 100%;
+  border: none;
+  background: #414141;
+  resize: none;
+  font-size: 16px;
+}
+
+.form__input_textarea {
+  margin-bottom: 25px;
+}
+
+.form__btn {
+  margin-right: 20px;
+  padding: 21px 55px;
+  border: none;
+  background: #FF9900;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.form__input_checkbox {
+  margin: 18px 0 0 0;
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+}
+
+.fake-checkbox {
+  position: relative;
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  border: 1px solid #CACACA;
+  background: #222222;
+}
+
+.form__description {
+  padding: 10px 0;
+  color: #CACACA;
+  font-size: 16px;
+}
+
+.footer-description__text {
+  padding-top: 79px;
+  line-height: 32px;
+  color: #CACACA;
+  font-size: 16px;
+  white-space: pre-line;
+}
+
+/* Псеводклассы и псевдоэлементы */
+
+.footer-links__link:focus {
+  outline: 2px solid #fff;
+}
+
+.footer-links__link:hover {
+  text-decoration: underline;
+}
+
+/* Соц. ссылки сжимаются при наведении*/
+
+.socials__item:hover {
+  transform: scale(.9, .9);
+  transition-duration: .4s;
+}
+
+.socials__link:focus::before {
+  outline: 3px solid #fff;
+}
+
+.socials__item:focus::before {
+  outline: 1px solid red;
+}
+
+/* Фоновая картинка соц. сетей */
+
+.socials__item:nth-child(1) {
+  width: 60px;
+  height: 60px;
+  background-image: url(../img/footer-facebook.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Фоновая картинка соц. сетей */
+
+.socials__item:nth-child(2) {
+  width: 60px;
+  height: 60px;
+  background-image: url(../img/footer-vk.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Фоновая картинка соц. сетей */
+
+.socials__item:nth-child(3) {
+  margin-right: 0;
+  width: 60px;
+  height: 60px;
+  background-image: url(../img/footer-instagram.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*Ссылка растянута на весь элемент списка*/
+
+.socials__link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Кнопка меняет цвет при наведении */
+
+.form__btn:focus {
+  outline: 2px solid #fff;
+}
+
+.form__btn:hover {
+  background: rgba(255, 153, 0, 0.6);
+  transition-duration: .4s;
+}
+
+/* Кнопка меняет цвет при нажатии */
+
+.form__btn:active {
+  background: #E1670E;
+}
+
+/* Картинка галочки на фоне */
+
+.fake-checkbox::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 1px;
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background-image: url(../img/footer-check.svg);
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition-duration: .2s;
+}
+
+/* Галочка появляется при нажатии на текст */
+
+.form__input_checkbox:checked+.fake-checkbox::before {
+  opacity: 1;
+}
+
+.form__input::placeholder {
+  color: #fff;
+}
+
+/* При фокусе на checkbox, у fak-checkbox появляется outline  */
+
+.form__input_checkbox:focus~.fake-checkbox {
+  outline: 1px solid #fff;
+}
+
+/* Media */
+
+@media (max-width: 1919px) {
+  
+.footer-links {
+     margin-right: auto; 
+  }
+}
+
+@media (max-width: 1335px) {
+  
+  .form-wrapper {
+    margin-right: 0;
+  }
+
+  .footer-description {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  
+ .footer {
+    padding-top: 47px;
+    padding-right: 15px;
+    padding-left: 50px;
+    padding-bottom: 80px;
+ }
+
+ .footer__img {
+    margin-bottom: 8px;
+  }
+
+ .form__input {
+    width: 94%;
+  }
+
+  .form__btn {
+    margin-right: 13px;
+    padding: 23px 42px;
+    font-size: 16px;
+  }
+
+  .form__description {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1023px) {
+  
+  .footer-wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .footer-links {
+    margin-right: 0;
+  }
+
+  .footer-links__list {
+    display: none;
+  }
+
+  .form-wrapper {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  
+  .footer {
+    padding-top: 63px;
+  }
+
+  .form-wrapper__header {
+    margin-top: 0;
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 767px) {
+  
+  .footer-links {
+    padding-top: 25px;
+    text-align: center;
+    border-top: 1px solid #595959;
+  }
+
+  .socials {
+    justify-content: center;
+  }
+
+  .form-wrapper__header {
+    font-size: 24px;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  .form__btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+  }
+  
+  .form__inner-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form__input_checkbox {
+    margin: 0px 235px 0 0;
+  }
+
+  .fake-checkbox {
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  
+  .footer {
+    padding-top: 38px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .form-wrapper {
+    margin-bottom: 21px;
+  }
+
+  .form-wrapper__header {
+    margin-top: 0;
+    margin-bottom: 19px;
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .form__input {
+    width: 100%;
+    padding: 19px 18px;
+  }
+
+  .form__btn {
+    margin-bottom: 8px;
+    padding: 13px 28px;
+    font-size: 14px;
+  }
+
+  .footer__img {
+    margin-bottom: 13px;
+    width: 130px;
+    height: 39px;
+  }
+
+  .socials__item {
+    margin-right: 12px;
+  }
+
+  .socials__item:nth-child(1),
+  .socials__item:nth-child(2),
+  .socials__item:nth-child(3) {
+    width: 37px;
+    height: 37px;
+  }
+}
+
+@media (max-width: 320px) {
+  
+  .form-wrapper__header {
+    font-size: 24px;
+  }
+
+  .form__input {
+    padding: 22px 18px;
+  }
+
+  .form__input_textarea {
+    margin-bottom: 22px;
+    padding: 18px;
+  }
+
+  .form__btn {
+    margin-bottom: 10px;
+    padding: 13px 23px;
+  }
+}

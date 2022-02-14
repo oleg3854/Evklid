@@ -1,0 +1,70 @@
+html {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	min-width: 320px;
+	font-family: "Montserrat", sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1;
+	overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+button, input {
+  font: inherit; 
+}
+
+.container {
+	max-width: 1770px;
+	margin: 0 auto;
+}
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0 !important;
+	border: 0 !important;
+	height: 1px !important; 
+	width: 1px !important; 
+	overflow: hidden;
+}
+
+.section__header {
+	margin-bottom: 44px;
+	line-height: 59px;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 48px;
+	color: #333333;
+}

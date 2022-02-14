@@ -1,0 +1,309 @@
+.header {
+	padding-top: 14px;
+	padding-bottom: 14px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+}
+
+.burger {
+	position: relative;
+	display: none;
+	width: 30px;
+	height: 23px;
+	cursor: pointer;
+}
+
+.burger__center-line{
+	top: 10px;
+}
+
+.burger__list {
+	display: none;
+}
+
+.header__logo {
+	margin-right: auto;
+}
+
+.header__list {
+	display: flex;
+	align-items: center;
+}
+
+.header__item {
+	margin-right: 81px;
+}
+
+.header__link {
+	font-size: 19px;
+	font-weight: 600;
+}
+
+.header__btn {
+	margin-right: 0;
+	padding: 0;
+	width: 20px;
+	height: 20px;
+	border: none;
+	cursor: pointer;
+	background-color: #fff;
+}
+
+/* Псеводклассы и псевдоэлементы */
+
+.header__item:nth-child(5) {
+	margin-right: 86px;
+}
+
+.header__link:focus {
+	outline: 2px solid #000;
+}
+
+.header__link:hover {
+	border-bottom: 2px solid #FF9900;
+}
+
+.header__link:active {
+	color: #E1670E;
+	border-bottom: 2px solid #E1670E;
+	transition-duration: .2s;
+}
+
+#header__svg:hover circle {
+	stroke: #FF9900;
+}
+
+#header__svg:hover rect{
+	fill: #FF9900;
+}
+
+#header__svg:active circle {
+	stroke: #E1670E;
+}
+
+#header__svg:active rect{
+	fill: #E1670E;
+}
+
+.burger::before {
+	content: '';
+	top: 0;
+}
+
+.burger::after {
+	content: '';
+	top: 20px;
+}
+
+.burger::before,
+.burger::after,
+.burger__center-line {
+	position: absolute;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 3px;
+	background-color: #000;
+}
+
+.burger:hover::before,
+.burger:hover::after,
+.burger:hover .burger__center-line {
+	background-color: #FF9900;
+	transition: .4s;
+}
+
+.burger:active::before,
+.burger:active::after,
+.burger:active .burger__center-line {
+	background-color: #E1670E;
+	transition: .4s;
+}
+
+.header__btn:focus {
+	outline: 2px solid #000;
+}
+
+/* Media */
+
+@media (max-width: 1200px) {
+
+	.header__item {
+    	margin-right: 60px;
+	}
+
+	.header__item:nth-child(5n) {
+    	margin-right: 60px;
+	}
+}
+
+
+@media (max-width: 1024px) {
+
+	.header {
+		padding-top: 25px;
+	}
+
+	.nav {
+		justify-content: space-between;
+	}
+
+	.burger {
+		display: block;
+	}
+
+	.burger_active .burger__center-line {
+		transform: rotate(45deg);
+		transition: .4s;
+	}
+
+	.burger__list {
+		position: fixed;
+		z-index: 3;
+		top: 0;
+		right: -100%;
+		display: block;
+		width: 70%;
+		height: 100%;
+		background-color: #FFFAFA;
+		opacity: .9;
+		transition: 1.3s;
+	}
+
+	.burger__list_active{
+		right: 0;
+	}
+
+	.burger__item {
+		padding: 15px 0 15px 15px;
+		font-size: 30px;
+		font-weight: bold;
+	}
+
+	.header__logo {
+		width: 160px;
+		margin-right: 0;
+	}
+
+	.header__list {
+		display: none;
+	}
+
+	.burger_active::before{
+		top: 10px;
+		transform: rotate(45deg);
+		transition: .4s;
+	}
+
+	.burger_active::after{
+		top: 10px;
+		transform: rotate(-45deg);
+		transition: .4s;
+	}
+
+	.burger__item:nth-child(1) {
+		position: absolute;
+		top: 5%;
+		right: 15%;
+		padding: 0;
+		cursor: pointer;
+	}
+
+	.burger__item:nth-child(2) {
+		padding-top: 25px;
+	}
+
+	.burger__item_close::before {
+		content: '';
+		position: absolute;
+		width: 30px;
+		height: 3px;
+		background-color: #000;
+		transform: rotate(45deg);
+	}
+
+	.burger__item_close::after {
+		content: '';
+		position: absolute;
+		width: 30px;
+		height: 3px;
+		background-color: #000;
+		transform: rotate(-45deg);
+	}
+
+	.burger__link:hover {
+		border-bottom: 2px solid #FF9900;
+	}
+
+	.burger__link:active {
+		color: #E1670E;
+		border-bottom: 2px solid #E1670E;
+		transition-duration: .2s;
+	}
+
+	.burger__item_close:hover::before,
+	.burger__item_close:hover::after {
+		background-color: #FF9900;
+		transition: .4s;
+	}
+
+	.burger__item_close:active::before,
+	.burger__item_close:active::after {
+		background-color: #E1670E;
+		transition: .4s;
+	}
+}
+
+@media (max-width: 768px) {
+	
+	.header {
+    	padding-top: 30px;
+    	padding-bottom: 9px;
+	}
+}
+
+@media (max-width: 576px) {
+
+	.header {
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+
+	.header__logo {
+		width: 120px;
+		height: 40px;
+	}
+}
+
+@media (max-width: 320px) {
+	
+	.header {
+		padding-top: 37px;
+    	padding-left: 15px;
+    	padding-right: 15px;
+    	padding-bottom: 6px;
+	}
+
+	.nav {
+		flex-direction: row-reverse;
+	}
+
+	.burger {
+	    width: 25px;
+    	height: 20px;
+	}
+
+	.header__logo {
+    	width: 100px;
+    	height: 35px;
+	}
+
+	.header__btn {
+		display: none;
+	}
+}
